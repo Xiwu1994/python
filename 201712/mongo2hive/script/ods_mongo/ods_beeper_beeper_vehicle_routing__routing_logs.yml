@@ -1,0 +1,8 @@
+steps:
+  - type: export
+    ops:
+      - mongo2hive:
+          yaml_file: ods_beeper_vehicle_routing_mongodb_routing_logs.yml
+          hive_db: ods_mongo.ods_beeper_beeper_vehicle_routing__routing_logs
+          mongo_db:  beeper_vehicle_routing.routing_logs
+          partition: p_day=${yesterday}

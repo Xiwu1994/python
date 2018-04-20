@@ -1,0 +1,8 @@
+steps:
+  - type: export
+    ops:
+      - mongo2hive:
+          yaml_file: ods_customer_feature_mongodb_customer_feature_infos.yml
+          hive_db: ods_mongo.ods_beeper_customer_feature__customer_feature_infos
+          mongo_db:  customer_feature.customer_feature_infos
+          partition: p_day=${yesterday}

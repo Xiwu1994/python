@@ -1,0 +1,33 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: subsidy_by_cartypes
+        column:
+        -name: city
+          type: string
+        -name: cts
+          type: date
+        -name: sp
+          type: double
+        -name: st
+          type: long
+        -name: __v
+          type: long
+        -name: sid
+          type: long
+        -name: entry
+          type: string
+        -name: ctid
+          type: long
+        -name: desc
+          type: string
+  setting:
+    speed:
+      channel: '1'

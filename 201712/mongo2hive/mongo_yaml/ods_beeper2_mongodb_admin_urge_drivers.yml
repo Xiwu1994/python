@@ -1,0 +1,29 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: admin_urge_drivers
+        column:
+        -name: cts
+          type: date
+        -name: udid
+          type: long
+        -name: dd
+          type: string
+        -name: did
+          type: long
+        -name: __v
+          type: long
+        -name: tid
+          type: long
+        -name: id
+          type: long
+  setting:
+    speed:
+      channel: '1'

@@ -1,0 +1,8 @@
+steps:
+  - type: export
+    ops:
+      - mongo2hive:
+          yaml_file: ods_beeper2_mongodb_customer_checkin_dates.yml
+          hive_db: ods_mongo.ods_beeper_beeper2__customer_checkin_dates
+          mongo_db:  beeper2.customer_checkin_dates
+          partition: p_day=${yesterday}

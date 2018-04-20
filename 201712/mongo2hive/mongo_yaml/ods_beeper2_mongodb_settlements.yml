@@ -1,0 +1,28 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: settlements
+        column:
+        -name: cts
+          type: date
+        -name: money
+          type: long
+        -name: st
+          type: long
+        -name: __v
+          type: long
+        -name: t
+          type: long
+        -name: cids
+          type: array
+          splitter: ','
+  setting:
+    speed:
+      channel: '1'

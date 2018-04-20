@@ -1,0 +1,39 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: bills_send_logs
+        column:
+        -name: status
+          type: long
+        -name: settlement_start_date
+          type: date
+        -name: err
+          type: string
+        -name: settlement_end_date
+          type: date
+        -name: email_title
+          type: string
+        -name: csv_file
+          type: string
+        -name: ts
+          type: date
+        -name: settlement_method
+          type: long
+        -name: bslid
+          type: long
+        -name: __v
+          type: long
+        -name: cuid
+          type: long
+        -name: email
+          type: string
+  setting:
+    speed:
+      channel: '1'

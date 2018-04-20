@@ -1,0 +1,41 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: field_control_clerks_tasks
+        column:
+        -name: lid
+          type: long
+        -name: wid
+          type: long
+        -name: cts
+          type: date
+        -name: did
+          type: long
+        -name: fccid
+          type: long
+        -name: check_in_st
+          type: long
+        -name: pcid
+          type: long
+        -name: e_wh_arrival_hm
+          type: string
+        -name: __v
+          type: long
+        -name: ftid
+          type: long
+        -name: cuid
+          type: long
+        -name: date
+          type: string
+        -name: check_in_ts
+          type: date
+  setting:
+    speed:
+      channel: '1'

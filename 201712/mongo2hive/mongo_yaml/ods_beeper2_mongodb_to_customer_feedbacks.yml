@@ -1,0 +1,33 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: to_customer_feedbacks
+        column:
+        -name: comment
+          type: string
+        -name: fdid
+          type: long
+        -name: cts
+          type: date
+        -name: driver
+          type: string
+        -name: st
+          type: long
+        -name: customer
+          type: string
+        -name: __v
+          type: long
+        -name: fdts
+          type: date
+        -name: type
+          type: long
+  setting:
+    speed:
+      channel: '1'

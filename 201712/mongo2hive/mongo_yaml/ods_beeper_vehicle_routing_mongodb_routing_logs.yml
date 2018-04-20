@@ -1,0 +1,31 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: routing_logs
+        column:
+        -name: solution_text
+          type: string
+        -name: requested_at
+          type: date
+        -name: problem_text
+          type: string
+        -name: solution
+          type: string
+        -name: solved_at
+          type: date
+        -name: correlation_id
+          type: string
+        -name: reply_to
+          type: string
+        -name: problem
+          type: string
+  setting:
+    speed:
+      channel: '1'

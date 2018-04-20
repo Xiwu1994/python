@@ -1,0 +1,35 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: sms
+        column:
+        -name: templateData
+          type: string
+        -name: created
+          type: date
+        -name: workerId
+          type: long
+        -name: templateName
+          type: string
+        -name: platform
+          type: string
+        -name: __v
+          type: long
+        -name: isSent
+          type: boolean
+        -name: sendTime
+          type: date
+        -name: sendResult
+          type: string
+        -name: mobiles
+          type: string
+  setting:
+    speed:
+      channel: '1'

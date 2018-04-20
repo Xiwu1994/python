@@ -1,0 +1,15 @@
+user: xxx
+passwd: xxx
+db_host: xxx
+db_port: xxx
+db_list:
+  - db_name: xxx
+    table_list:
+    - xxx
+    - xxx
+    - xxx
+  - db_name: xxx
+    table_list:
+    - xxx
+    - xxx
+    - xxx

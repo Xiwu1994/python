@@ -1,0 +1,8 @@
+steps:
+  - type: export
+    ops:
+      - mongo2hive:
+          yaml_file: ods_beeper_notify_mongodb_sms.yml
+          hive_db: ods_mongo.ods_beeper_beeper_notify__sms
+          mongo_db:  beeper_notify.sms
+          partition: p_day=${yesterday}

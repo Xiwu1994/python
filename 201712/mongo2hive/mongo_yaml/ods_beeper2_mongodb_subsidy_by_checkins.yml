@@ -1,0 +1,24 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: subsidy_by_checkins
+        column:
+        -name: subsidy
+          type: array
+          splitter: ','
+        -name: city
+          type: string
+        -name: __v
+          type: long
+        -name: cts
+          type: date
+  setting:
+    speed:
+      channel: '1'

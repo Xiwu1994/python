@@ -1,0 +1,19 @@
+job:
+  content:
+  - reader:
+      name: mongodbreader
+      parameter:
+        address:
+        - '${mongodb_ip}:${mongodb_port}'
+        userName: ''
+        userPassword: ''
+        dbName: '${mongodb_database}'
+        collectionName: customer_checkin_dates
+        column:
+        -name: date
+          type: string
+        -name: cuid
+          type: long
+  setting:
+    speed:
+      channel: '1'

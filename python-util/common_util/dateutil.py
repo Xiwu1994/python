@@ -41,7 +41,7 @@ class DateUtil(object):
         return date_string
 
     @staticmethod
-    def get_interval_day_fmt(interval, fmt, init_date=None):
+    def get_interval_day_fmt(interval, fmt=None, init_date=None):
         if fmt is None:
             fmt = "%Y-%m-%d"
         if init_date is None:
